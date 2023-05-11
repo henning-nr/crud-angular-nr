@@ -7,7 +7,6 @@ import {RouterModule} from '@angular/router';
 
 import { AppComponent }   from './app.component';
 import { ProductService } from './productservice';
-
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
 import {CalendarModule} from 'primeng/calendar';
@@ -28,6 +27,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { PersonService } from './person.service';
 
 @NgModule({
   imports: [
@@ -60,7 +60,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
   ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductService, MessageService, ConfirmationService]
+  providers: [ProductService, PersonService, MessageService, ConfirmationService]
 })
 
 export class AppModule { }
