@@ -23,14 +23,17 @@ import { Person } from './person.model';
 export class AppComponent {
   productDialog: boolean;
 
+  born: Date;
+
   products: Product[];
-  
+
   product: Product;
-  
+
   selectedProducts: Product[];
-  
+
   submitted: boolean;
-  persons: Person[]
+  persons: Person[];
+  person: Person;
 
   constructor(
     private productService: ProductService,
@@ -42,13 +45,13 @@ export class AppComponent {
   ngOnInit() {
     this.productService.getProducts().then((data) => (this.products = data));
     this.personService.getPersons().then((data) => {
-        this.persons = data
-        console.log(this.persons)
+      this.persons = data;
+      console.log(this.persons);
     });
   }
 
   openNew() {
-    this.product = {};
+    this.person = {};
     this.submitted = false;
     this.productDialog = true;
   }
@@ -73,8 +76,9 @@ export class AppComponent {
     });
   }
 
-  editProduct(product: Product) {
-    this.product = { ...product };
+  editProduct(person: Person) {
+    this.person = { ...person };
+    this.person.born = new Date(this.person.born)
     this.productDialog = true;
   }
 

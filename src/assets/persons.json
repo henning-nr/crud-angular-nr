@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "João Silva",
-      "born": "21/01/2000",
+      "born": "2000-01-15",
       "gender": "m",
       "heigth": 1.8,
       "weigth": 96.5,
@@ -13,7 +13,7 @@
     {
       "id": "2",
       "name": "Pedro Lima",
-      "born": "14/04/1996",
+      "born": "1996-01-20",
       "gender": "m",
       "heigth": 1.6,
       "weigth": 46.8,
@@ -23,7 +23,7 @@
     {
       "id": "3",
       "name": "Maria Oliveira",
-      "born": "14/04/1980",
+      "born": "1990-03-15",
       "gender": "f",
       "heigth": 1.7,
       "weigth": 56,
